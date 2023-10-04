@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((function(e,t,r){if("get-headers"===e.action){var n=function(){var e=Array.from(document.querySelectorAll("h1, h2, h3, h4, h5, h6")).map((function(e){return e.innerText}));r(e)};if("complete"!==document.readyState)return setTimeout(n,100),!0;n()}}));

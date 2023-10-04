@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((function(e,t,n){if("get-user-data"===e.action)return chrome.tabs.query({active:!0,currentWindow:!0},(function(e){chrome.tabs.sendMessage(e[0].id,{action:"get-headers"},n)})),!0}));
